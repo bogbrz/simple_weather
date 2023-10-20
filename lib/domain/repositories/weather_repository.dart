@@ -11,18 +11,11 @@ class WeatherRepository {
   Future<WeatherModel?> getWeatherData({
     required String city,
   }) async {
-    final responseData =
-        await _weatherRemoteDataSource.getWeatherModel(city: city);
-    if (responseData == null) {
+    final json = await _weatherRemoteDataSource.getWeatherModel(city: city);
+    if (json == null) {
       return null;
     }
 
-    final name = responseData['location']['name'] as String;
-    final temperature = (responseData['current']['temp_c']) as double;
-
-    print(temperature);
-    print(name);
-
-    return WeatherModel(city: name, temperature: temperature);
+    return WeatherModel.fromJson(json);
   }
 }
