@@ -378,7 +378,9 @@ packages:
       sha256: "9528f2f296073ff54cb9fee677df673ace1218163c3bc7628093e7eed5203d41"
       url: "https://pub.dev"
     source: hosted
+
     version: "0.5.0"
+
   meta:
     dependency: transitive
     description:
@@ -591,7 +593,9 @@ packages:
       sha256: a97ce2013f240b2f3807bcbaf218765b6f301c3eff91092bcfa23a039e7dd151
       url: "https://pub.dev"
     source: hosted
+
     version: "2.0.2"
+
   typed_data:
     dependency: transitive
     description:
